@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:calm/models/resources_model.dart'; // Your Resource model
-import 'package:calm/services/resource_service.dart'; // Ensure fetchResources is imported
+import 'package:calm/models/resources_model.dart'; 
+import 'package:calm/services/resource_service.dart'; 
 
 class ResourcesScreen extends StatelessWidget {
   @override
@@ -9,7 +9,7 @@ class ResourcesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Self-Help Resources')),
       body: FutureBuilder<List<Resource>>(
-        future: fetchResources(), // Ensure this method is properly defined and imported
+        future: fetchResources(), 
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());

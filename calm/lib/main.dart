@@ -2,9 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart'; // For kIsWeb
 
-//
 import 'package:calm/screens/home_screen.dart';
-
+import 'package:calm/screens/auth/login_screen.dart';
+import 'package:calm/screens/auth/register_screen.dart';
+import 'package:calm/screens/assessments_screen.dart';
+import 'package:calm/screens/chat_screen.dart';
+import 'package:calm/screens/community_screen.dart';
+import 'package:calm/screens/crisis_screen.dart';
+import 'package:calm/screens/gamification_screen.dart';
+import 'package:calm/screens/moodtracking_screen.dart';
+// import 'package:calm/screens/profile_screen.dart';
+// import 'package:calm/screens/reminders_screen.dart';
+import 'package:calm/screens/resources_screen.dart';
+import 'package:calm/screens/therapist_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -54,10 +64,22 @@ class Calm extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: HomePage(),
-      
-     //
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/login_screen': (context) => LoginScreen(),
+        '/chat_screen': (context) => ChatScreen(),
+        '/community_screen': (context) => CommunityScreen(),
+        '/crisis_screen': (context) => CrisisScreen(),
+        '/gamification_screen': (context) => GamificationScreen(),
+        '/moodtracking_screen': (context) => VideoList(),
+        '/register_screen': (context) => RegisterScreen(),
+        '/resources_screen': (context) => ResourcesScreen(),
+        '/assessment_screen': (context) => AssessmentScreen(),
+        '/therapist_screen': (context) => TherapistDirectoryScreen(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
 }
+
