@@ -45,6 +45,10 @@ dependencies:
   flutter_cache_manager: ^3.4.1
   connectivity_plus: ^6.1.1
   youtube_player_iframe: ^4.0.4
+  audioplayers: ^6.1.0
+  path_provider: ^2.1.5
+  dio: ^5.7.0
+  just_audio: ^0.9.42
 
 
 
@@ -68,6 +72,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/ocean.png
+    - assets/thunderstorm.png
+    - assets/rain.png
+    - assets/waterfall.png
+    - assets/rainforest.png
+    - assets/tin.png
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

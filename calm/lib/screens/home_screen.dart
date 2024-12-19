@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Import your screens here
-import 'package:calm/screens/assessments_screen.dart';
+import 'package:calm/screens/sound_list.dart';
 import 'package:calm/screens/chat_screen.dart';
 import 'package:calm/screens/community_screen.dart';
 import 'package:calm/screens/crisis_screen.dart';
@@ -33,7 +33,7 @@ class MentalHealthApp extends StatelessWidget {
         '/gamification_screen': (context) => GamificationScreen(),
         '/moodtracking_screen': (context) => VideoList(),
         '/resources_screen': (context) => ResourcesScreen(),
-        '/assessment_screen': (context) => AssessmentScreen(),
+        '/sound_list.dart': (context) => RelaxingSoundList(),
         '/therapist_screen': (context) => TherapistDirectoryScreen(),
       },
     );
@@ -81,9 +81,9 @@ class HomePage extends StatelessWidget {
       'route': '/gamification_screen',
     },
     {
-      'name': 'Assessments',
+      'name': 'Relaxing Sounds',
       'icon': Icons.assignment,
-      'route': '/assessments_screen',
+      'route': '/sound_list.dart',
     },
   ];
 

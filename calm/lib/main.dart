@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart'; // For kIsWeb
 import 'package:calm/screens/home_screen.dart';
 import 'package:calm/screens/auth/login_screen.dart';
 import 'package:calm/screens/auth/register_screen.dart';
-import 'package:calm/screens/assessments_screen.dart';
+import 'package:calm/screens/sound_list.dart';
 import 'package:calm/screens/chat_screen.dart';
 import 'package:calm/screens/community_screen.dart';
 import 'package:calm/screens/crisis_screen.dart';
@@ -75,7 +75,7 @@ class Calm extends StatelessWidget {
         '/moodtracking_screen': (context) => VideoList(),
         '/register_screen': (context) => RegisterScreen(),
         '/resources_screen': (context) => ResourcesScreen(),
-        '/assessment_screen': (context) => AssessmentScreen(),
+        '/sound_list.dart': (context) => RelaxingSoundList(),
         '/therapist_screen': (context) => TherapistDirectoryScreen(),
       },
       debugShowCheckedModeBanner: false,
