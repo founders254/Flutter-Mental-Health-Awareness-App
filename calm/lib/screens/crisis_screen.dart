@@ -1,37 +1,62 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
+class WebViewPage extends StatefulWidget {
+  final String title;
+  final String url;
 
+  const WebViewPage({Key? key, required this.title, required this.url}) : super(key: key);
 
+  @override
+  _WebViewPageState createState() => _WebViewPageState();
+}
 
-class CrisisScreen extends StatelessWidget {
-  final List<Map<String, String>> hotlines = [
-    {'country': 'Kenya', 'number': '254 722 178 177'},
-    {'country': 'USA', 'number': '1-800-273-8255'},
-    {'country': 'UK', 'number': '116-123'},
-    {'country': 'India', 'number': '9152987821'},
-    
-  ];
+class _WebViewPageState extends State<WebViewPage> {
+  late InAppWebViewController _controller;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Crisis Management')),
-      body: ListView.builder(
-        itemCount: hotlines.length,
-        itemBuilder: (context, index) {
-          final hotline = hotlines[index];
-          return ListTile(
-            title: Text(hotline['country']!),
-            subtitle: Text(hotline['number']!),
-            trailing: IconButton(
-              icon: Icon(Icons.call),
-              onPressed: () {
-                launch('tel:${hotline['number']}');
-              },
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Stack(
+        children: [
+          InAppWebView(
+            initialUrlRequest: URLRequest(url: WebUri(widget.url)),
+
+            onWebViewCreated: (controller) {
+              _controller = controller;
+            },
+            onLoadStart: (controller, url) {
+              setState(() {
+                isLoading = true;
+              });
+            },
+            onLoadStop: (controller, url) {
+              setState(() {
+                isLoading = false;
+              });
+            },
+            onProgressChanged: (controller, progress) {
+              if (progress == 100) {
+                setState(() {
+                  isLoading = false;
+                });
+              }
+            },
+          ),
+          if (isLoading)
+            const Center(
+              child: CircularProgressIndicator(),
             ),
-          );
-        },
+        ],
       ),
     );
   }

@@ -9,6 +9,8 @@ list(APPEND FLUTTER_PLUGIN_LIST
   firebase_auth
   firebase_core
   flutter_inappwebview_windows
+  flutter_tts
+  google_fit
   url_launcher_windows
 )
 

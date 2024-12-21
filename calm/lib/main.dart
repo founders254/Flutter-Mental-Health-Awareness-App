@@ -15,6 +15,12 @@ import 'package:calm/screens/moodtracking_screen.dart';
 // import 'package:calm/screens/reminders_screen.dart';
 import 'package:calm/screens/resources_screen.dart';
 import 'package:calm/screens/therapist_screen.dart';
+import 'package:calm/screens/affirmation_screen.dart';
+import 'package:calm/screens/fitness_tracker_page.dart';
+
+
+
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -68,15 +74,23 @@ class Calm extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/login_screen': (context) => LoginScreen(),
-        '/chat_screen': (context) => ChatScreen(),
+        '/chat_screen': (context) => AIChatScreen(),
         '/community_screen': (context) => CommunityScreen(),
-        '/crisis_screen': (context) => CrisisScreen(),
-        '/gamification_screen': (context) => GamificationScreen(),
+        '/crisis_screen': (context) => WebViewPage(
+                  url: 'https://findahelpline.com', 
+                  title: 'Crisis Management',
+                ),
+        '/gamification_screen': (context) => MemoryCardGame(),
         '/moodtracking_screen': (context) => VideoList(),
         '/register_screen': (context) => RegisterScreen(),
         '/resources_screen': (context) => ResourcesScreen(),
         '/sound_list.dart': (context) => RelaxingSoundList(),
         '/therapist_screen': (context) => TherapistDirectoryScreen(),
+        '/affirmation_screen': (context) => DailyAffirmationPage(),
+        '/fitness_tracker_page': (context) => FitnessTrackerPage(),        
+
+        
+
       },
       debugShowCheckedModeBanner: false,
     );

@@ -45,5 +45,12 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We need access to your health data to track steps.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We need access to update your health data for tracking.</string>
+
+	<key>NSAppTransportSecurity</key>
+	<key>NSAllowsArbitraryLoads</key>
 </dict>
 </plist>

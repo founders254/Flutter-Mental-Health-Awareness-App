@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Import your screens here
+import 'package:calm/screens/fitness_tracker_page.dart';
 import 'package:calm/screens/sound_list.dart';
 import 'package:calm/screens/chat_screen.dart';
 import 'package:calm/screens/community_screen.dart';
@@ -9,6 +10,8 @@ import 'package:calm/screens/gamification_screen.dart';
 import 'package:calm/screens/moodtracking_screen.dart';
 import 'package:calm/screens/resources_screen.dart';
 import 'package:calm/screens/therapist_screen.dart';
+import 'package:calm/screens/affirmation_screen.dart';
+
 
 void main() {
   runApp(const MentalHealthApp());
@@ -26,11 +29,16 @@ class MentalHealthApp extends StatelessWidget {
         primarySwatch: Colors.teal,
       ),
       home: const HomePage(),
-      routes: {        
-        '/chat_screen': (context) =>  ChatScreen(),
+      routes: {
+        '/fitness_tracker_page': (context) => FitnessTrackerPage(),        
+        '/affirmation_screen': (context) => DailyAffirmationPage(),        
+        '/chat_screen': (context) =>  AIChatScreen(),
         '/community_screen': (context) =>  CommunityScreen(),
-        '/crisis_screen': (context) => CrisisScreen(),
-        '/gamification_screen': (context) => GamificationScreen(),
+        '/crisis_screen': (context) => WebViewPage(
+                  url: 'https://findahelpline.com', 
+                  title: 'Crisis Management',
+                ),
+        '/gamification_screen': (context) => MemoryCardGame(),
         '/moodtracking_screen': (context) => VideoList(),
         '/resources_screen': (context) => ResourcesScreen(),
         '/sound_list.dart': (context) => RelaxingSoundList(),
@@ -49,6 +57,11 @@ class HomePage extends StatelessWidget {
       'name': 'User Profiles',
       'icon': Icons.person,
       'route': '/userProfile',
+    },
+    {
+      'name': 'Daily Affirmations',
+      'icon': Icons.auto_fix_high,
+      'route': '/affirmation_screen',
     },
     {
       'name': 'Mood Tracking',
@@ -83,7 +96,12 @@ class HomePage extends StatelessWidget {
     {
       'name': 'Relaxing Sounds',
       'icon': Icons.assignment,
-      'route': '/sound_list.dart',
+      'route': '/sound_list',
+    },
+    {
+      'name': 'Fitness Tracker',
+      'icon': Icons.directions_walk,
+      'route': '/fitness_tracker_page',
     },
   ];
 
