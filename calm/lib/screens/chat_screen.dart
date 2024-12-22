@@ -49,31 +49,40 @@ class _AIChatScreenState extends State<AIChatScreen> {
   }
 
   Future<void> _fetchResponse(String userMessage) async {
-    final url = Uri.parse("https://api.openai.com/v1/chat/completions"); // Replace with your AI API
-    const apiKey = "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";
+    const String apiKey = "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"; // Replace with your API key.
+    const String apiUrl = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill";
 
-    final response = await http.post(
-      url,
-      headers: {
-        "Authorization": "Bearer $apiKey",
-        "Content-Type": "application/json",
-      },
-      body: jsonEncode({
-        "model": "gpt-3.5-turbo",
-        "messages": [
-          {"role": "system", "content": "You are a mental health support assistant."},
-          {"role": "user", "content": userMessage},
-        ],
-        "max_tokens": 100,
-      }),
-    );
+    try {
+      final response = await http.post(
+        Uri.parse(apiUrl),
+        headers: {
+          "Authorization": "Bearer $apiKey",
+          "Content-Type": "application/json",
+        },
+        body: jsonEncode({
+          "inputs": userMessage,
+          "options": {"wait_for_model": true},
+        }),
+      );
 
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      final aiResponse = data['choices'][0]['message']['content'];
+      print("Response status code: ${response.statusCode}");
+      print("Response body: ${response.body}");
 
-      _addSystemMessage(aiResponse);
-    } else {
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        if (data.containsKey("generated_text")) {
+          final aiResponse = data["generated_text"];
+          _addSystemMessage(aiResponse);
+        } else {
+          _addSystemMessage("I'm sorry, I couldn't process your request.");
+        }
+      } else {
+        final errorData = jsonDecode(response.body);
+        final errorMessage = errorData["error"] ?? "Unknown error.";
+        _addSystemMessage("Error: $errorMessage");
+      }
+    } catch (e) {
+      print("Error: $e");
       _addSystemMessage("Oops! Something went wrong. Please try again.");
     }
   }
@@ -100,7 +109,9 @@ class _AIChatScreenState extends State<AIChatScreen> {
             padding: const EdgeInsets.all(8.0),
             child: TextField(
               controller: _textController,
-              onSubmitted: _sendMessage,
+              onSubmitted: (text) {
+                if (text.trim().isNotEmpty) _sendMessage(text.trim());
+              },
               decoration: InputDecoration(
                 hintText: "Type your message...",
                 border: OutlineInputBorder(
@@ -109,7 +120,9 @@ class _AIChatScreenState extends State<AIChatScreen> {
                 suffixIcon: IconButton(
                   icon: const Icon(Icons.send),
                   onPressed: () {
-                    _sendMessage(_textController.text.trim());
+                    if (_textController.text.trim().isNotEmpty) {
+                      _sendMessage(_textController.text.trim());
+                    }
                   },
                 ),
               ),
