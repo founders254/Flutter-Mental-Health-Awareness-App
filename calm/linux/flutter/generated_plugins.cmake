@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   audioplayers_linux
+  file_selector_linux
   google_fit
   url_launcher_linux
 )

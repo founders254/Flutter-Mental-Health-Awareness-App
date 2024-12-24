@@ -11,6 +11,9 @@ import 'package:calm/screens/moodtracking_screen.dart';
 import 'package:calm/screens/resources_screen.dart';
 import 'package:calm/screens/therapist_screen.dart';
 import 'package:calm/screens/affirmation_screen.dart';
+import 'package:calm/screens/post_screen.dart';
+
+
 
 
 void main() {
@@ -33,7 +36,7 @@ class MentalHealthApp extends StatelessWidget {
         '/fitness_tracker_page': (context) => FitnessTrackerPage(),        
         '/affirmation_screen': (context) => DailyAffirmationPage(),        
         '/chat_screen': (context) =>  AIChatScreen(),
-        '/community_screen': (context) =>  CommunityScreen(),
+        '/community_screen': (context) =>  ChatCommunityScreen(),
         '/crisis_screen': (context) => WebViewPage(
                   url: 'https://findahelpline.com', 
                   title: 'Crisis Management',
@@ -43,6 +46,8 @@ class MentalHealthApp extends StatelessWidget {
         '/resources_screen': (context) => ResourcesScreen(),
         '/sound_list.dart': (context) => RelaxingSoundList(),
         '/therapist_screen': (context) => TherapistDirectoryScreen(),
+        '/post_screen': (context) => PostListScreen(),
+
       },
     );
   }
@@ -56,7 +61,7 @@ class HomePage extends StatelessWidget {
     {
       'name': 'User Profiles',
       'icon': Icons.person,
-      'route': '/userProfile',
+      'route': '/post_screen',
     },
     {
       'name': 'Daily Affirmations',

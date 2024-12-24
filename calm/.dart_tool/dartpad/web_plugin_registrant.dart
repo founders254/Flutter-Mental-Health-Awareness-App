@@ -17,6 +17,7 @@ import 'package:firebase_database_web/firebase_database_web.dart';
 import 'package:flutter_inappwebview_web/web/main.dart';
 import 'package:flutter_tts/flutter_tts_web.dart';
 import 'package:google_fit/google_fit_web.dart';
+import 'package:image_picker_for_web/image_picker_for_web.dart';
 import 'package:just_audio_web/just_audio_web.dart';
 import 'package:shared_preferences_web/shared_preferences_web.dart';
 import 'package:speech_to_text/speech_to_text_web.dart';
@@ -38,6 +39,7 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   InAppWebViewFlutterPlugin.registerWith(registrar);
   FlutterTtsPlugin.registerWith(registrar);
   GoogleFitWeb.registerWith(registrar);
+  ImagePickerPlugin.registerWith(registrar);
   JustAudioPlugin.registerWith(registrar);
   SharedPreferencesPlugin.registerWith(registrar);
   SpeechToTextPlugin.registerWith(registrar);

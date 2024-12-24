@@ -140,6 +140,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "cross_file",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/cross_file-0.3.4+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.6",
       "packageUri": "lib/",
@@ -222,6 +228,30 @@
       "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "file_selector_linux",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.3+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "file_selector_macos",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.4+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "file_selector_platform_interface",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "file_selector_windows",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.3+3",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "firebase_auth",
@@ -386,6 +416,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.24",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///C:/Program%20Files/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -444,6 +480,54 @@
       "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "image_picker",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "image_picker_android",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.12+19",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "image_picker_for_web",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-3.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "image_picker_ios",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.12+1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "image_picker_linux",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_macos",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_platform_interface",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "image_picker_windows",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "intl",
@@ -540,6 +624,12 @@
       "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "mime",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/mime-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "nested",
@@ -992,7 +1082,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-22T06:26:53.104999Z",
+  "generated": "2024-12-24T09:34:07.884723Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///C:/Program%20Files/flutter",

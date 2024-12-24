@@ -17,6 +17,8 @@ import 'package:calm/screens/resources_screen.dart';
 import 'package:calm/screens/therapist_screen.dart';
 import 'package:calm/screens/affirmation_screen.dart';
 import 'package:calm/screens/fitness_tracker_page.dart';
+import 'package:calm/screens/post_screen.dart';
+
 
 
 
@@ -72,10 +74,11 @@ class Calm extends StatelessWidget {
       themeMode: ThemeMode.system,
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => LoginScreen(),
+        '/home_screen': (context) => HomePage(),
         '/login_screen': (context) => LoginScreen(),
         '/chat_screen': (context) => AIChatScreen(),
-        '/community_screen': (context) => CommunityScreen(),
+        '/community_screen': (context) => ChatCommunityScreen(),
         '/crisis_screen': (context) => WebViewPage(
                   url: 'https://findahelpline.com', 
                   title: 'Crisis Management',
@@ -88,6 +91,8 @@ class Calm extends StatelessWidget {
         '/therapist_screen': (context) => TherapistDirectoryScreen(),
         '/affirmation_screen': (context) => DailyAffirmationPage(),
         '/fitness_tracker_page': (context) => FitnessTrackerPage(),        
+        '/post_screen': (context) => PostListScreen(),
+
 
         
 
