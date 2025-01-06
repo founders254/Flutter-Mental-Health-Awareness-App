@@ -45,7 +45,7 @@ class MentalHealthApp extends StatelessWidget {
         '/moodtracking_screen': (context) => VideoList(),
         '/resources_screen': (context) => ResourcesScreen(),
         '/sound_list.dart': (context) => RelaxingSoundList(),
-        '/therapist_screen': (context) => TherapistDirectoryScreen(),
+        '/therapist_screen': (context) => TherapistListScreen(),
         '/post_screen': (context) => PostListScreen(),
 
       },

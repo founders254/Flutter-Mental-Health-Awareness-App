@@ -1,6 +1,35 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+// StreamBuilder<QuerySnapshot>(
+//   stream: FirebaseFirestore.instance
+//       .collection('appointments')
+//       .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+//       .snapshots(),
+//   builder: (context, snapshot) {
+//     if (!snapshot.hasData) {
+//       return Center(child: CircularProgressIndicator());
+//     }
+
+//     final appointments = snapshot.data!.docs;
+
+//     return ListView.builder(
+//       itemCount: appointments.length,
+//       itemBuilder: (context, index) {
+//         final appointment = appointments[index];
+//         return ListTile(
+//           title: Text(appointment['therapistName']),
+//           subtitle: Text(
+//             'Date: ${appointment['meetingTime'].toDate()} \nStatus: ${appointment['status']}',
+//           ),
+//           trailing: Text('\$${widget.consultationFee.toStringAsFixed(2)}'),
+//         );
+//       },
+//     );
+//   },
+// )
+
+
 class ProfileScreen extends StatelessWidget {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 

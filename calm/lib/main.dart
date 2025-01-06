@@ -88,7 +88,7 @@ class Calm extends StatelessWidget {
         '/register_screen': (context) => RegisterScreen(),
         '/resources_screen': (context) => ResourcesScreen(),
         '/sound_list.dart': (context) => RelaxingSoundList(),
-        '/therapist_screen': (context) => TherapistDirectoryScreen(),
+        '/therapist_screen': (context) => TherapistListScreen(),
         '/affirmation_screen': (context) => DailyAffirmationPage(),
         '/fitness_tracker_page': (context) => FitnessTrackerPage(),        
         '/post_screen': (context) => PostListScreen(),

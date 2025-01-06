@@ -410,6 +410,24 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "flutter_local_notifications",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications-18.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "flutter_local_notifications_linux",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_linux-5.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "flutter_local_notifications_platform_interface",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_platform_interface-8.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "flutter_parsed_text",
       "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_parsed_text-2.2.1",
       "packageUri": "lib/",
@@ -878,6 +896,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "timezone",
+      "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/timezone-0.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "tutorial_coach_mark",
       "rootUri": "file:///C:/Users/JOSEPH%20MAKAU/AppData/Local/Pub/Cache/hosted/pub.dev/tutorial_coach_mark-1.2.12",
       "packageUri": "lib/",
@@ -1082,7 +1106,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-24T09:34:07.884723Z",
+  "generated": "2025-01-06T13:31:25.905357Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///C:/Program%20Files/flutter",
