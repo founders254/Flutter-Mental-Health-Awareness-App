@@ -18,6 +18,8 @@ import 'package:calm/screens/therapist_screen.dart';
 import 'package:calm/screens/affirmation_screen.dart';
 import 'package:calm/screens/fitness_tracker_page.dart';
 import 'package:calm/screens/post_screen.dart';
+import 'package:calm/screens/therapist_registration_screen.dart';
+
 
 
 
@@ -76,6 +78,7 @@ class Calm extends StatelessWidget {
       routes: {
         '/': (context) => LoginScreen(),
         '/home_screen': (context) => HomePage(),
+        '/therapist_registration_screen': (context) => TherapistRegistrationScreen(),
         '/login_screen': (context) => LoginScreen(),
         '/chat_screen': (context) => AIChatScreen(),
         '/community_screen': (context) => ChatCommunityScreen(),
