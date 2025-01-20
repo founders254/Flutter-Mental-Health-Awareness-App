@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+// Import the therapist dashboard screen
+import 'therapistDashboard.dart'; // Update with the correct path to your dashboard screen
+
 class TherapistRegistrationScreen extends StatefulWidget {
   @override
-  _TherapistRegistrationScreenState createState() => _TherapistRegistrationScreenState();
+  _TherapistRegistrationScreenState createState() =>
+      _TherapistRegistrationScreenState();
 }
 
-class _TherapistRegistrationScreenState extends State<TherapistRegistrationScreen> {
+class _TherapistRegistrationScreenState
+    extends State<TherapistRegistrationScreen> {
   final _formKey = GlobalKey<FormState>();
   final _auth = FirebaseAuth.instance;
   final _firestore = FirebaseFirestore.instance;
@@ -39,6 +44,16 @@ class _TherapistRegistrationScreenState extends State<TherapistRegistrationScree
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text('Registration successful!'),
         ));
+
+        // Navigate to the therapist dashboard
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => TherapistDashboard(
+              therapistName: name!, // Pass therapist's name to the dashboard
+            ),
+          ),
+        );
       } catch (e) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text('Error: $e'),
@@ -65,7 +80,8 @@ class _TherapistRegistrationScreenState extends State<TherapistRegistrationScree
               TextFormField(
                 decoration: InputDecoration(labelText: 'Specialization'),
                 onSaved: (value) => specialization = value,
-                validator: (value) => value!.isEmpty ? 'Enter specialization' : null,
+                validator: (value) =>
+                    value!.isEmpty ? 'Enter specialization' : null,
               ),
               TextFormField(
                 decoration: InputDecoration(labelText: 'Email'),
@@ -75,19 +91,22 @@ class _TherapistRegistrationScreenState extends State<TherapistRegistrationScree
               TextFormField(
                 decoration: InputDecoration(labelText: 'Phone'),
                 onSaved: (value) => phone = value,
-                validator: (value) => value!.isEmpty ? 'Enter phone number' : null,
+                validator: (value) =>
+                    value!.isEmpty ? 'Enter phone number' : null,
               ),
               TextFormField(
                 decoration: InputDecoration(labelText: 'Consultation Fee (USD)'),
                 keyboardType: TextInputType.number,
                 onSaved: (value) => consultationFee = double.tryParse(value!),
-                validator: (value) => value!.isEmpty ? 'Enter consultation fee' : null,
+                validator: (value) =>
+                    value!.isEmpty ? 'Enter consultation fee' : null,
               ),
               TextFormField(
                 decoration: InputDecoration(labelText: 'Experience (Years)'),
                 keyboardType: TextInputType.number,
                 onSaved: (value) => experience = double.tryParse(value!),
-                validator: (value) => value!.isEmpty ? 'Enter years of experience' : null,
+                validator: (value) =>
+                    value!.isEmpty ? 'Enter years of experience' : null,
               ),
               SizedBox(height: 20),
               ElevatedButton(

@@ -19,7 +19,7 @@ import 'package:calm/screens/affirmation_screen.dart';
 import 'package:calm/screens/fitness_tracker_page.dart';
 import 'package:calm/screens/post_screen.dart';
 import 'package:calm/screens/therapist_registration_screen.dart';
-
+import 'package:calm/screens/therapistDashboard.dart';
 
 
 
@@ -95,6 +95,7 @@ class Calm extends StatelessWidget {
         '/affirmation_screen': (context) => DailyAffirmationPage(),
         '/fitness_tracker_page': (context) => FitnessTrackerPage(),        
         '/post_screen': (context) => PostListScreen(),
+        '/therapistDashboard': (context) => TherapistDashboard(therapistName: 'John Doe'),
 
 
         
